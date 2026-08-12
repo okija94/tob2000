@@ -1,0 +1,16 @@
+# Terraform executable
+terraform.exe
+
+# Terraform working directory
+**/.terraform/*
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files
+*.tfvars
+*.auto.tfvars
+
+# Terraform plan files
+*tfplan*
