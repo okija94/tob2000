@@ -18,3 +18,11 @@ variable "virtual_network_interface_ids" {
     type=list(string)
     description = "This will hold the virtual network interfaces ids"
 }
+
+variable "vm_secrets" {
+  type = object({
+     admin_username      = string
+  admin_password = string
+  })
+  
+}

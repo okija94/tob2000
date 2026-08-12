@@ -48,3 +48,11 @@ variable "virtual_machine_count" {
     description = "This provides the number of virtual machines"
   
 }
+
+variable "vm_secrets" {
+  type = object({
+     admin_username      = string
+  admin_password = string
+  })
+  
+}

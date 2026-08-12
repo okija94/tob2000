@@ -4,8 +4,8 @@ resource "azurerm_linux_virtual_machine" "appvm" {
   resource_group_name = var.resource_group_name
   location            = var.location
   size                = "Standard_B2ats_v2"
-  admin_username      = "linuxadmin"
-  admin_password = "Azure@123"
+  admin_username      = var.vm_secrets.admin_username
+  admin_password = var.vm_secrets.admin_password
   disable_password_authentication = false
   network_interface_ids = [
     var.virtual_network_interface_ids[count.index]

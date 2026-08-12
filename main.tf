@@ -25,4 +25,5 @@ module "machines" {
     location = var.location
     virtual_machine_count = var.virtual_machine_count
     virtual_network_interface_ids = module.network.vrtual_network_interfaces_ids
+    vm_secrets = var.vm_secrets
 }
