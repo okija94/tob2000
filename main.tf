@@ -27,3 +27,10 @@ module "machines" {
   virtual_network_interface_ids = module.network.vrtual_network_interfaces_ids
   vm_secrets                    = var.vm_secrets
 }
+
+module "storage_account" {
+  source           = "./modules/storage/azurestorage"
+  storage_accounts = var.storage_accounts
+  depends_on       = [module.resource-group]
+
+}
