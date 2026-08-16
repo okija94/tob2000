@@ -11,9 +11,7 @@ resource "azurerm_subnet" "network_subnets" {
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.virtual_network.name
   address_prefixes     = [cidrsubnet(var.vnet_address_prefix,8,count.index)]
-  tags ={
-    tier= "Tier3"
-  }
+  
 }
 
 resource "azurerm_public_ip" "public_ipaddress" {
